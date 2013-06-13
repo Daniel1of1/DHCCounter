@@ -23,7 +23,9 @@
 		18D7026B175F8BFF0094C297 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D70242175F8BFF0094C297 /* UIKit.framework */; };
 		18D7026C175F8BFF0094C297 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D70244175F8BFF0094C297 /* Foundation.framework */; };
 		18D70274175F8BFF0094C297 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18D70272175F8BFF0094C297 /* InfoPlist.strings */; };
-		18D70277175F8BFF0094C297 /* DHCCounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D70276175F8BFF0094C297 /* DHCCounterTests.m */; };
+		18D70281175F8D0C0094C297 /* CounterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D70280175F8D0C0094C297 /* CounterSpec.m */; };
+		18D70285175F92940094C297 /* DHCCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D70283175F925E0094C297 /* DHCCounter.m */; };
+		756C74AB0FD2445D821A8882 /* libPods-DHCCounterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C574878AE854E8D917B424C /* libPods-DHCCounterTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +60,11 @@
 		18D70269175F8BFF0094C297 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		18D70271175F8BFF0094C297 /* DHCCounterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DHCCounterTests-Info.plist"; sourceTree = "<group>"; };
 		18D70273175F8BFF0094C297 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		18D70275175F8BFF0094C297 /* DHCCounterTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHCCounterTests.h; sourceTree = "<group>"; };
-		18D70276175F8BFF0094C297 /* DHCCounterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHCCounterTests.m; sourceTree = "<group>"; };
+		18D70280175F8D0C0094C297 /* CounterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterSpec.m; sourceTree = "<group>"; };
+		18D70282175F925E0094C297 /* DHCCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DHCCounter.h; path = DHCCounterTests/DHCCounter.h; sourceTree = SOURCE_ROOT; };
+		18D70283175F925E0094C297 /* DHCCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DHCCounter.m; path = DHCCounterTests/DHCCounter.m; sourceTree = SOURCE_ROOT; };
+		2C574878AE854E8D917B424C /* libPods-DHCCounterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DHCCounterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D60FE976F4B410AA75EE792 /* Pods-DHCCounterTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DHCCounterTests.xcconfig"; path = "Pods/Pods-DHCCounterTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +85,7 @@
 				18D7026A175F8BFF0094C297 /* SenTestingKit.framework in Frameworks */,
 				18D7026B175F8BFF0094C297 /* UIKit.framework in Frameworks */,
 				18D7026C175F8BFF0094C297 /* Foundation.framework in Frameworks */,
+				756C74AB0FD2445D821A8882 /* libPods-DHCCounterTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +99,7 @@
 				18D7026F175F8BFF0094C297 /* DHCCounterTests */,
 				18D70241175F8BFF0094C297 /* Frameworks */,
 				18D70240175F8BFF0094C297 /* Products */,
+				2D60FE976F4B410AA75EE792 /* Pods-DHCCounterTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +119,7 @@
 				18D70244175F8BFF0094C297 /* Foundation.framework */,
 				18D70246175F8BFF0094C297 /* CoreGraphics.framework */,
 				18D70269175F8BFF0094C297 /* SenTestingKit.framework */,
+				2C574878AE854E8D917B424C /* libPods-DHCCounterTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -119,6 +127,8 @@
 		18D70248175F8BFF0094C297 /* DHCCounter */ = {
 			isa = PBXGroup;
 			children = (
+				18D70282175F925E0094C297 /* DHCCounter.h */,
+				18D70283175F925E0094C297 /* DHCCounter.m */,
 				18D70251175F8BFF0094C297 /* AppDelegate.h */,
 				18D70252175F8BFF0094C297 /* AppDelegate.m */,
 				18D7025A175F8BFF0094C297 /* ViewController.h */,
@@ -147,9 +157,8 @@
 		18D7026F175F8BFF0094C297 /* DHCCounterTests */ = {
 			isa = PBXGroup;
 			children = (
-				18D70275175F8BFF0094C297 /* DHCCounterTests.h */,
-				18D70276175F8BFF0094C297 /* DHCCounterTests.m */,
 				18D70270175F8BFF0094C297 /* Supporting Files */,
+				18D70280175F8D0C0094C297 /* CounterSpec.m */,
 			);
 			path = DHCCounterTests;
 			sourceTree = "<group>";
@@ -187,10 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18D7027D175F8BFF0094C297 /* Build configuration list for PBXNativeTarget "DHCCounterTests" */;
 			buildPhases = (
+				20FD4E2B982F4761AE6EF829 /* Check Pods Manifest.lock */,
 				18D70263175F8BFF0094C297 /* Sources */,
 				18D70264175F8BFF0094C297 /* Frameworks */,
 				18D70265175F8BFF0094C297 /* Resources */,
 				18D70266175F8BFF0094C297 /* ShellScript */,
+				60F2D9980E1A4B7686B8B990 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,6 +278,34 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		20FD4E2B982F4761AE6EF829 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sanbox is not in sync with the Podfile.lock. Run 'pod install'.\nEOM\n    exit 1\nfi\n";
+		};
+		60F2D9980E1A4B7686B8B990 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-DHCCounterTests-resources.sh\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -277,6 +316,7 @@
 				18D7024F175F8BFF0094C297 /* main.m in Sources */,
 				18D70253175F8BFF0094C297 /* AppDelegate.m in Sources */,
 				18D7025C175F8BFF0094C297 /* ViewController.m in Sources */,
+				18D70285175F92940094C297 /* DHCCounter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18D70277175F8BFF0094C297 /* DHCCounterTests.m in Sources */,
+				18D70281175F8D0C0094C297 /* CounterSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +456,7 @@
 		};
 		18D7027E175F8BFF0094C297 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D60FE976F4B410AA75EE792 /* Pods-DHCCounterTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DHCCounter.app/DHCCounter";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -433,6 +474,7 @@
 		};
 		18D7027F175F8BFF0094C297 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D60FE976F4B410AA75EE792 /* Pods-DHCCounterTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DHCCounter.app/DHCCounter";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -467,6 +509,7 @@
 				18D7027C175F8BFF0094C297 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18D7027D175F8BFF0094C297 /* Build configuration list for PBXNativeTarget "DHCCounterTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +518,7 @@
 				18D7027F175F8BFF0094C297 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

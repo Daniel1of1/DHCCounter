@@ -9,6 +9,8 @@
 #import "Kiwi.h"
 #import "DHCCounter.h"
 
+
+
 @interface NotificationCatcher : NSObject
 -(void)gotNotification:(NSNotification *)notification;
 
@@ -37,6 +39,10 @@ describe(@"counter", ^{
     beforeAll(^{
         [NSUserDefaults resetStandardUserDefaults];
         [[NSNotificationCenter defaultCenter] addObserver:notificationCatcher selector:@selector(gotNotification:) name:@"DHCEventCountChangeForEventNametestEvent" object:nil];
+    });
+    
+    afterAll(^{
+        [[NSNotificationCenter defaultCenter] removeObserver:notificationCatcher name:@"DHCEventCountChangeForEventNametestEvent" object:nil];
     });
     
     beforeEach(^{
